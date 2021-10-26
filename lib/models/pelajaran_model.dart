@@ -1,5 +1,6 @@
 class PelajaranModel {
-  final String id, nama, youTubeID;
+  final String nama, youTubeID;
+  final int id;
 
   PelajaranModel(
       {required this.id, required this.nama, required this.youTubeID});

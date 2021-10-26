@@ -79,20 +79,20 @@ class Home extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: controller.obx(
                 (value) => Column(
-                  children:
-                      // List.generate(
-                      //     value!.length,
-                      //     (index) => ItemPelajaran(
-                      //         videoId: value[index].youTubeID,
-                      //         title: value[index].nama))
-                      List.generate(
-                    value!["data"].length,
-                    (index) => ItemPelajaran(
-                      videoId: value["data"][index]["detail"][0]["youtube_id"],
-                      title: value["data"][index]["nama"],
+                    children: List.generate(
+                  value!.length,
+                  (index) => ItemPelajaran(
+                      videoId: value[index].youTubeID,
+                      title: value[index].nama),
+                )
+                    //     List.generate(
+                    //   value!["data"].length,
+                    //   (index) => ItemPelajaran(
+                    //     videoId: value["data"][index]["detail"][0]["youtube_id"],
+                    //     title: value["data"][index]["nama"],
+                    //   ),
+                    // ),
                     ),
-                  ),
-                ),
               ),
             ),
           ],
